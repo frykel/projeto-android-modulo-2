@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+@font-face{
+    font-family: 'idroid';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'consola';
+    src: url('fontes/consola.TTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    /*a pseudoclasse :root será usada como ferramenta de modificação do código como um todo,
+    dentro dela colocamos variáveis CSS que são sinalizadas pelo sinal de -- e estão sendo usadas abaixo para armazenar cores e fontes etc... */
+    --cor01:#84e1ad;
+    --cor02:#2B975A;
+    --cor03:#1A5C38;
+    
+    --fontep: Arial, Verdana, Helvetica, sans-serif;
+}
+* {
+    margin: 0px;;
+    padding: 0px;
+}
+div#inicio{
+    font-family: 'consola', sans-serif ;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 34px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+p{
+    text-indent: 40px;
+    font-family: var(--fontep);
+    line-height: 1.5em;
+}
+body{
+    /* var(--cor01) foi usado para ativar a variável declarada em :root */
+    background-color:var(--cor01);
+    padding: 0px;
+    font-family: var(--fontep);
+    
+}
+header{
+    background-image: linear-gradient(to bottom,#3AD07D,#2B975A,#1A5C38) ;
+    margin: 0px;
+}
+header>p{
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    color: white;
+    
+    
+}
+a{
+    color: #1D5E3A;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.externo::after{
+    content: '\1F517';
+}
+span::after{
+    content: ' ⮚';
+    color:#2FA866;
+    
+}
+nav>a:hover{
+    box-shadow: inset 30px 30px 2px 2px #3AD07D;
+    padding: 3px;
+}
+nav{
+    padding-bottom: 5px;
+}
+
+nav>a{
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    
+}
+
+h1{
+    color: #1D5E3A;
+    font-family: 'idroid', sans-serif;
+}
+h2{
+    background-image: linear-gradient(to right,#C5EBD6, white) ; 
+    font-family: 'idroid', sans-serif;
+    color: #1D5E3A;
+}
+
+main{
+    background-color: white;
+    
+    margin: auto;
+    padding: 10px;
+    
+    min-width: 320px;
+    max-width: 900px;
+    
+}
+main img{
+    
+    width: 100%;
+    
+}
+main p{
+    text-align: justify;
+}
+div.imagem{
+    text-align: center;
+    
+   
+    
+}
+main img.pequena{
+    max-width: 350px;
+    margin: auto;
+    display: block;
+}
+
+div#vid{
+    background-color: #1A5C38;
+    padding: 20px;
+    text-align: center;
+    
+}
+iframe{
+    width: 80%;
+}
+div#bloco{
+    background-color: #C5EBD6;
+    border-radius: 10px;
+     
+    margin: 10px;
+}
+div#bloco>h3{
+    background-color: #2FA866;
+    color: white;
+    padding: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+div#bloco>p{
+    padding: 10px;
+}
+div#bloco>ul{
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714'; /*troca a marcação da lista pelo símbolo/emoji 2714 , mas não é compatível com todos os navegadores*/
+   
+}
+footer{
+    background-color: #1A5C38;
+    padding: 3px;
+}
+footer>p{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+p#final{
+    margin-left: 15px;
+}
